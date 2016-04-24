@@ -15,7 +15,7 @@ can submit this single file to the autograder.
 
 However, you can test each of the 3 parts separately.  The files
 `spec/part[123]_spec.rb` contain RSpec tests for each of the three
-parts.  For example, to test your answers to Part 1, say `rspec
+parts.  For example, to test your answers to Part 1, say `rspec 
 spec/part1_spec.rb`.  `rspec` with no arguments runs the tests in all
 the files `spec/*_spec.rb`.
 

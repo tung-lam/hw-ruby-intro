@@ -3,15 +3,17 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  return 0 if arr.empty?
+  arr.inject { |sum, i| sum + i  }
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  return sum arr.max(2)
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  return false if arr.empty?
+  return arr.permutation(2).any? { |a, b| a + b == n }
 end
 
 # Part 2
