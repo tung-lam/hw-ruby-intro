@@ -1,5 +1,5 @@
 # When done, submit this entire file to the autograder.
-
+		
 # Part 1
 
 def sum arr
@@ -32,6 +32,39 @@ end
 
 # Part 3
 
+require 'action_pack'
+require 'action_view'
+include ActionView::Helpers::NumberHelper
+
 class BookInStock
-# YOUR CODE HERE
+	# constructor
+	def initialize isbn, price
+		if isbn == "" || price <= 0
+			raise ArgumentError.new
+		end
+		@isbn = isbn
+		@price = price
+	end
+
+	# getter
+	def isbn
+		@isbn
+	end
+
+	def price
+		@price
+	end
+
+	# setter
+	def isbn=(new_isbn)
+		@isbn = new_isbn
+	end
+
+	def price=(new_price)
+		@price = new_price
+	end
+
+	def price_as_string
+		return number_to_currency(@price, precision: 2) 
+	end
 end
